@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset ="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> McLaren Quiz </title>
+	<link rel ="stylesheet" href ="css/index.css">
+</head>
+
+<body>
+<header>
+	<ul class = "navbar">
+		<li> <a href="index.html" class="pull-left"><img src="img/f1logo.jpg" alt="f1car" width="100" height="35" ></a> </li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Teams</a>
+			<div class="dropdown-content">
+				<a href="ferrariabout.html">Ferrari</a>
+				<a href="#">McLaren</a>
+				<a href="#">Red Bull </a>
+				<a href="#">Williams</a>
+				<a href="#">Mercedes</a>
+				<a href="#">Aston Martin</a>
+	</ul>
+</header>
+
+<hr>
+			
+<div id="main">
+	<div id="header">
+		<h1 style="font-family:verdana;">McLaren Quiz!</h1>
+		<br>
+	</div>
+
+	<form id="form1">
+			<HR COLOR="#FF8700" SIZE="4">
+
+		<h2>Where is current driver Lando Norris from?</h2>
+		<label for="q1_1"><input type="radio" name="q1" value="20" id="q1_1" />United Kingdom</label>
+		<label for="q1_2"><input type="radio" name="q1" value="0" id="q1_2" />Australia</label>
+		<label for="q1_3"><input type="radio" name="q1" value="0" id="q1_3" />America</label>
+		<label for="q1_4"><input type="radio" name="q1" value="0" id="q1_4"/>Singapore</label>
+		<label for="q1_5"><input type="radio" name="q1" value="0" id="q1_5"/>New Zealand</label>
+			<HR COLOR="#FF8700" SIZE="4">
+
+		<h2>What team did Daniel Ricciardo race for before McLaren?</h2>
+		<label for="q2_1"><input type="radio" name="q2" value="20" id="q2_1"/>Renault</label>
+		<label for="q2_2"><input type="radio" name="q2" value="0" id="q2_2"/>Toro Rosso</label>
+		<label for="q2_3"><input type="radio" name="q2" value="0" id="q2_3" />Racing Point</label>
+		<label for="q2_4"><input type="radio" name="q2" value="0" id="q2_4" />Alfa Romeo</label>
+		<label for="q2_5"><input type="radio" name="q2" value="0" id="q2_5" />Red Bull</label>
+			<HR COLOR="#FF8700" SIZE="4">
+
+		<h2>Who raced beside Lando Norris before Daniel Ricciardo?</h2>
+		<label for="q3_1"><input type="radio" name="q3" value="0" id="q3_1" />George Russell</label>
+		<label for="q3_2"><input type="radio" name="q3" value="0" id="q3_2" />Alex Albon</label>
+		<label for="q3_3"><input type="radio" name="q3" value="20" id="q3_3" />Carlos Sainz</label>
+		<label for="q3_4"><input type="radio" name="q3" value="0" id="q3_4" />Lewis Hamilton</label>
+		<label for="q3_5"><input type="radio" name="q3" value="0" id="q3_5" />Estaban Ocon</label>
+			<HR COLOR="#FF8700" SIZE="4">
+
+		<h2>How many constructor championships do McLaren hold?</h2>
+		<label for="q4_1"><input type="radio" name="q4" value="0" id="q4_1" />1</label>
+		<label for="q4_2"><input type="radio" name="q4" value="0" id="q4_2" />3</label>
+		<label for="q4_3"><input type="radio" name="q4" value="20" id="q4_3" />8</label>
+		<label for="q4_4"><input type="radio" name="q4"  value="0" id="q4_4" />10</label>
+		<label for="q4_5"><input type="radio" name="q4"  value="0" id="q4_5" />12</label>
+			<HR COLOR="#FF8700" SIZE="4">
+			
+		<h2>Who of the following have not driven for McLaren?</h2>
+		<label for="q5_1"><input type="radio" name="q5" value="0" id="q5_1" />Jenson Button</label>
+		<label for="q5_2"><input type="radio" name="q5" value="0" id="q5_2" />Martin Brundle</label>
+		<label for="q5_3"><input type="radio" name="q5" value="0" id="q5_3" />Kevin Magnusson</label>
+		<label for="q5_4"><input type="radio" name="q5"  value="0" id="q5_4" />Niki Lauda</label>
+		<label for="q5_5"><input type="radio" name="q5"  value="20" id="q5_5" />Lewis Hamilton</label>
+			<HR COLOR="#FF8700" SIZE="4">
+
+		<button type="submit" value="Submit">Submit</a></button>
+
+	</form>
+	<p style="font-family:verdana;">Your grade is: <span id="grade">__</span></p>
+</div>
+
+<br> 
+<p>Want to try again? <a href ="mclarenquiz.html"> Click here! </a> </p>
+<p>Need some revision? Refer <a href ="#">here</a> to get a helping hand.</p>
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       q1 = parseInt(document.querySelector('input[name = "q1"]:checked').value);
+	   q2 = parseInt(document.querySelector('input[name = "q2"]:checked').value);
+	   q3 = parseInt(document.querySelector('input[name = "q3"]:checked').value);
+	   q4 = parseInt(document.querySelector('input[name = "q4"]:checked').value);
+	   q5 = parseInt(document.querySelector('input[name = "q5"]:checked').value);
+
+
+	   result = q1 + q2 + q3 + q4 + q5;
+
+	document.getElementById("grade").innerHTML = result;
+
+
+return false;
+} 
+
+</script>
+
+<hr>
+<footer>
+    Made by Angus Carfrae: 40340767 <br>
+	Work in progress. Built for academic purposes.
+</footer>
+</body>
+</html>
